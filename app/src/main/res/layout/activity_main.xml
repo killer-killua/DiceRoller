@@ -10,7 +10,9 @@
 
         tools:context=".MainActivity"
 
-        android:orientation="vertical">
+        android:orientation="vertical"
+
+        android:layout_gravity="center_vertical">
 
 
 
@@ -22,7 +24,9 @@
 
         android:text="Hello World!"
 
-        android:textsize="30sp"/>
+        android:textsize="30sp"
+
+        android:layout_gravity="center_horizontal"/>
 
     <Button
 
@@ -30,7 +34,9 @@
 
         android:layout_height="wrap_content"
 
-        />
+        android:text="roll"
+
+        android:layout_gravity="center_horizontal"/>
 
 
 
