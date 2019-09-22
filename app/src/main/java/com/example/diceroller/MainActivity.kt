@@ -3,11 +3,14 @@ package com.example.diceroller
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
+
+    lateinit var diceImage: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,7 +19,10 @@ class MainActivity : AppCompatActivity() {
         rollButton.text="Roll"
         rollButton.setOnClickListener { Toast.makeText(this,"button clicked", Toast.LENGTH_SHORT).show() }
         rollDice()
+        diceImage = findViewById(R.id.diceImage)
     }
+
+
 
     private fun rollDice() {
 
@@ -31,5 +37,7 @@ class MainActivity : AppCompatActivity() {
             5 -> R.drawable.dice_5
             else -> R.drawable.dice_6
         }
+
+        diceImage.setImageResource(drawableResource)
     }
 }
